@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
 
-	<record id="view_confirm_sale_order" model="ir.ui.view">
-		<field name="name">Confirm Sale Orders</field>
-		<field name="model">sale.order.confirm.wizard</field>
-		<field name="arch" type="xml">
-			<form string="Confirm Sale Orders">
-				<footer>
-					<button name="confirm_sale_orders" string="Confirm" type="object" class="oe_highlight"/>
-					or
-					<button string="Cancel" class="oe_link" special="cancel" />
-				</footer>
-			</form>
-		</field>
-	</record>
+    <record id="view_confirm_sale_order" model="ir.ui.view">
+        <field name="name">Confirm Sale Orders</field>
+        <field name="model">sale.order.confirm.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Confirm Sale Orders">
+                <footer>
+                    <button name="confirm_sale_orders" string="Confirm" type="object" class="oe_highlight" context="{'so_mass_confirm': True}"/>
+                    or
+                    <button string="Cancel" class="oe_link" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
 
 	<record id="action_confirm_sale_order" model="ir.actions.act_window">
 		<field name="name">Confirm Sale Orders</field>
